@@ -44,6 +44,8 @@ ENV PATH /usr/share/elasticsearch/bin:$PATH
 
 WORKDIR /usr/share/elasticsearch
 
+RUN bin/elasticsearch-plugin install analysis-smartcn
+
 RUN set -ex \
 	&& for path in \
 		./data \
